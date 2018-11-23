@@ -84,6 +84,22 @@ fn.called
 true
 ```
 
+### stub().args
+
+```js
+const fn = stub();
+
+fn.args
+// returns
+[]
+
+fn(1);
+
+fn.args
+// returns
+[[1]]
+```
+
 ## Related
 
 - [sinon-called-with-diff](https://github.com/coderaiser/sinon-called-with-diff) - sinon `calledWith` diff

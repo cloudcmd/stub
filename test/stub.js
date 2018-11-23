@@ -122,3 +122,20 @@ test('stub: calledWithNew: no', (t) => {
     t.notOk(fn.calledWithNew(), 'should not be called with new');
     t.end();
 });
+
+test('stub: args', (t) => {
+    const fn = stub();
+    
+    fn(1, 2);
+    fn('hello', 'world');
+    
+    t.deepEqual(fn.args, [[1, 2], ['hello', 'world']], 'should equal');
+    t.end();
+});
+
+test('stub: args: no', (t) => {
+    const fn = stub();
+    
+    t.deepEqual(fn.args, [], 'should equal');
+    t.end();
+});
