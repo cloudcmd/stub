@@ -1,0 +1,52 @@
+{
+  "name": "@cloudcmd/stub",
+  "version": "1.0.0",
+  "access": "public",
+  "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
+  "description": "simplest sinon.stub alternative with diff support",
+  "homepage": "http://github.com/coderaiser/cloudcmd/stub",
+  "main": "lib/stub.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cloudcmd/stub.git"
+  },
+  "scripts": {
+    "test": "tape 'test/*.js'",
+    "watch:test": "nodemon -w lib -w test -x \"npm test\"",
+    "lint": "eslint lib test",
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "jest-diff": "^23.6.0",
+    "strip-ansi": "^5.0.0"
+  },
+  "keywords": [
+    "sinon",
+    "stub",
+    "async",
+    "promise",
+    "calledWith",
+    "diff",
+    "tape"
+  ],
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "eslint": "^5.6.0",
+    "eslint-plugin-node": "^8.0.0",
+    "mock-require": "^3.0.2",
+    "nodemon": "^1.14.12",
+    "nyc": "^13.0.1",
+    "redrun": "^7.0.2",
+    "sinon": "^7.1.1",
+    "sinon-called-with-diff": "^3.0.0",
+    "tape": "^4.8.0",
+    "try-catch": "^2.0.0",
+    "try-to-catch": "^1.1.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.3.0"
+  }
+}
