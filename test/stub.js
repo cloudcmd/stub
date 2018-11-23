@@ -105,3 +105,20 @@ test('stub: returns', (t) => {
     t.end();
 });
 
+test('stub: calledWithNew', (t) => {
+    const fn = stub();
+    
+    new fn();
+    
+    t.ok(fn.calledWithNew(), 'should be called with new');
+    t.end();
+});
+
+test('stub: calledWithNew: no', (t) => {
+    const fn = stub();
+    
+    fn();
+    
+    t.notOk(fn.calledWithNew(), 'should not be called with new');
+    t.end();
+});

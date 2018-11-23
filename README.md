@@ -57,6 +57,17 @@ fn.calledWith('hello', 'world');
 // returns true
 ```
 
+### stub().calledWithNew()
+
+```js
+const fn = stub();
+
+new fn();
+
+fn.calledWithNew();
+// returns true
+```
+
 ### stub().called
 
 ```js
