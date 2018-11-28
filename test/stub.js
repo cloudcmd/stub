@@ -139,3 +139,22 @@ test('stub: args: no', (t) => {
     t.deepEqual(fn.args, [], 'should equal');
     t.end();
 });
+
+test('stub: callCount', (t) => {
+    const fn = stub();
+    
+    fn();
+    fn();
+    fn();
+    
+    t.equal(fn.callCount, 3, 'should equal');
+    t.end();
+});
+
+test('stub: callCount: not called', (t) => {
+    const fn = stub();
+    
+    t.equal(fn.callCount, 0, 'should equal');
+    t.end();
+});
+

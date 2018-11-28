@@ -84,6 +84,22 @@ fn.called
 true
 ```
 
+### stub().calledCount
+
+```js
+const fn = stub();
+
+fn.calledCount
+// returns
+0
+
+fn();
+
+fn.calledCount
+// returns
+1
+```
+
 ### stub().args
 
 ```js
