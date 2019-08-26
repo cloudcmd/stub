@@ -10,11 +10,12 @@
     "url": "git://github.com/cloudcmd/stub.git"
   },
   "scripts": {
-    "test": "tape 'test/*.js'",
-    "watch:test": "nodemon -w lib -w test -x \"npm test\"",
-    "lint": "eslint lib test",
-    "coverage": "nyc npm test",
-    "report": "nyc report --reporter=text-lcov | coveralls"
+    "test": "madrun test",
+    "watch:test": "madrun watch:test",
+    "lint": "madrun lint",
+    "fix:lint": "madrun fix:lint",
+    "coverage": "madrun coverage",
+    "report": "madrun report"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -41,6 +42,7 @@
     "nyc": "^14.1.1",
     "putout": "^5.8.0",
     "redrun": "^7.0.2",
+    "supertape": "^1.2.3",
     "try-catch": "^2.0.0",
     "try-to-catch": "^1.1.1"
   },
