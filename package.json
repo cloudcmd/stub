@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
-    "jest-diff": "^24.9.0",
+    "jest-diff": "^25.1.0",
     "strip-ansi": "^6.0.0"
   },
   "keywords": [
@@ -41,7 +41,6 @@
     "nodemon": "^2.0.0",
     "nyc": "^14.1.1",
     "putout": "^7.1.0",
-    "redrun": "^7.0.2",
     "supertape": "^1.2.3",
     "try-catch": "^2.0.0",
     "try-to-catch": "^2.0.0"
