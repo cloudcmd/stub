@@ -56,7 +56,7 @@ test('stub: called: await: throw', async (t) => {
     t.end();
 });
 
-test('stub: calledWith', async (t) => {
+test('stub: calledWith', (t) => {
     const fn = stub();
     
     fn('hello');
@@ -81,7 +81,7 @@ test('stub: calledWith: different', async (t) => {
     t.end();
 });
 
-test('stub: calledWith: not called', async (t) => {
+test('stub: calledWith: not called', (t) => {
     const {log} = console;
     console.log = noop;
     
