@@ -46,6 +46,15 @@ fn();
 'hello'
 ```
 
+### stub().throws([error])
+
+```js
+const fn = stub().throws(Error('hello'));
+fn();
+// throws
+Error 'hello'
+```
+
 ### stub().calledWith([args])
 
 ```js

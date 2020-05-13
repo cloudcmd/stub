@@ -2,6 +2,7 @@
 
 const test = require('supertape');
 const tryToCatch = require('try-to-catch');
+const tryCatch = require('try-catch');
 const {reRequire} = require('mock-require');
 const stub = require('..');
 
@@ -155,6 +156,15 @@ test('stub: callCount: not called', (t) => {
     const fn = stub();
     
     t.equal(fn.callCount, 0, 'should equal');
+    t.end();
+});
+
+test('stub: throws', (t) => {
+    const fn = stub().throws('hello');
+    
+    const [e] = tryCatch(fn);
+    
+    t.equal(e, 'hello');
     t.end();
 });
 
