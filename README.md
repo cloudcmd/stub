@@ -1,14 +1,13 @@
 # Stub [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
-[NPMIMGURL]:                https://img.shields.io/npm/v/@cloudcmd/stub.svg?style=flat&longCache=true
-[BuildStatusIMGURL]:        https://img.shields.io/travis/cloudcmd/stub/master.svg?style=flat&longCache=true
-[DependencyStatusIMGURL]:   https://img.shields.io/david/cloudcmd/stub.svg?style=flat&longCache=true
-[NPMURL]:                   https://npmjs.org/package/@cloudcmd/stub "npm"
-[BuildStatusURL]:           https://travis-ci.org/cloudcmd/stub  "Build Status"
-[DependencyStatusURL]:      https://david-dm.org/cloudcmd/stub "Dependency Status"
-
-[CoverageURL]:              https://coveralls.io/github/cloudcmd/stub?branch=master
-[CoverageIMGURL]:           https://coveralls.io/repos/cloudcmd/stub/badge.svg?branch=master&service=github
+[NPMIMGURL]: https://img.shields.io/npm/v/@cloudcmd/stub.svg?style=flat&longCache=true
+[BuildStatusIMGURL]: https://img.shields.io/travis/cloudcmd/stub/master.svg?style=flat&longCache=true
+[DependencyStatusIMGURL]: https://img.shields.io/david/cloudcmd/stub.svg?style=flat&longCache=true
+[NPMURL]: https://npmjs.org/package/@cloudcmd/stub "npm"
+[BuildStatusURL]: https://travis-ci.org/cloudcmd/stub "Build Status"
+[DependencyStatusURL]: https://david-dm.org/cloudcmd/stub "Dependency Status"
+[CoverageURL]: https://coveralls.io/github/cloudcmd/stub?branch=master
+[CoverageIMGURL]: https://coveralls.io/repos/cloudcmd/stub/badge.svg?branch=master&service=github
 
 Simplest [sinon.stub()](https://sinonjs.org/) alternative. With support of showing diff on `calleddWith`.
 
@@ -17,7 +16,6 @@ Simplest [sinon.stub()](https://sinonjs.org/) alternative. With support of showi
 ```
 npm i @cloudcmd/stub
 ```
-
 
 ## API
 
@@ -43,7 +41,7 @@ const asyncFn = stub(async () => {
 const fn = stub().returns('hello');
 fn();
 // returns
-'hello'
+'hello';
 ```
 
 ### stub().throws([error])
@@ -52,7 +50,7 @@ fn();
 const fn = stub().throws(Error('hello'));
 fn();
 // throws
-Error 'hello'
+Error('hello');
 ```
 
 ### stub().calledWith([args])
@@ -82,15 +80,15 @@ fn.calledWithNew();
 ```js
 const fn = stub();
 
-fn.called
+fn.called;
 // returns
-false
+false;
 
 fn();
 
-fn.called
+fn.called;
 // returns
-true
+true;
 ```
 
 ### stub().calledCount
@@ -98,15 +96,15 @@ true
 ```js
 const fn = stub();
 
-fn.calledCount
+fn.calledCount;
 // returns
-0
+0;
 
 fn();
 
-fn.calledCount
+fn.calledCount;
 // returns
-1
+1;
 ```
 
 ### stub().args
@@ -114,15 +112,15 @@ fn.calledCount
 ```js
 const fn = stub();
 
-fn.args
+fn.args;
 // returns
-[]
+[];
 
 fn(1);
 
-fn.args
+fn.args;
 // returns
-[[1]]
+[[1]];
 ```
 
 ## Related
@@ -135,4 +133,3 @@ fn.args
 ## License
 
 MIT
-
