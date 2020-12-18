@@ -91,18 +91,18 @@ fn.called;
 true;
 ```
 
-### stub().calledCount
+### stub().callCount
 
 ```js
 const fn = stub();
 
-fn.calledCount;
+fn.callCount;
 // returns
 0;
 
 fn();
 
-fn.calledCount;
+fn.callCount;
 // returns
 1;
 ```
