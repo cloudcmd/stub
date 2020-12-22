@@ -168,3 +168,10 @@ test('stub: throws', (t) => {
     t.end();
 });
 
+test('stub: watermark', (t) => {
+    const fn = stub();
+    
+    t.equal(fn.__watermark, 'stub');
+    t.end();
+});
+
