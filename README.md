@@ -123,6 +123,23 @@ fn.args;
 [[1]];
 ```
 
+### isStub(fn)
+
+Check if provided function is stub.
+
+```js
+const {stub, isStub} = require('@cloudcmd/stub');
+const fn = stub();
+
+isStub(fn);
+// returns
+true;
+
+isStub(() => {});
+// returns
+false;
+```
+
 ## Related
 
 - [sinon-called-with-diff](https://github.com/coderaiser/sinon-called-with-diff) - sinon `calledWith` diff

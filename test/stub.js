@@ -168,10 +168,22 @@ test('stub: throws', (t) => {
     t.end();
 });
 
-test('stub: watermark', (t) => {
+test('stub: isStub', (t) => {
     const fn = stub();
     
-    t.equal(fn.__watermark, 'stub');
+    t.ok(stub.isStub(fn), 'should be stub');
+    t.end();
+});
+
+test('stub: isStub: no', (t) => {
+    const fn = () => {};
+    
+    t.notOk(stub.isStub(fn), 'should not to be stub');
+    t.end();
+});
+
+test('stub: isStub: no arg', (t) => {
+    t.notOk(stub.isStub(), 'should not to be stub');
     t.end();
 });
 
