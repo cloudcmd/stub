@@ -62,23 +62,23 @@ test('stub: calledWith', (t) => {
     
     fn('hello');
     
-    t.ok(fn.calledWith('hello'), 'should check sondition');
+    const result = fn.calledWith('hello');
+    
+    t.ok(result, 'should check condition');
     t.end();
 });
 
 test('stub: calledWith: different', async (t) => {
-    const {log} = console;
-    console.log = noop;
-    
-    reRequire('../lib/called-with');
-    const stub = reRequire('..');
-    
     const fn = stub();
+    
+    stub.setLog(stub());
+    
     await fn('world');
+    const result = fn.calledWith('hello');
     
-    console.log = log;
+    stub.setLog(console.log);
     
-    t.notOk(fn.calledWith('hello'), 'should check sondition');
+    t.notOk(result, 'should check condition');
     t.end();
 });
 
