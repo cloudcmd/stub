@@ -54,7 +54,7 @@
     "nodemon": "^2.0.0",
     "nyc": "^15.0.0",
     "putout": "^12.7.0",
-    "supertape": "^3.9.1",
+    "supertape": "^4.0.0",
     "try-catch": "^3.0.0",
     "try-to-catch": "^3.0.0"
   },
