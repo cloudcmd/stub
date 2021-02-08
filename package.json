@@ -48,7 +48,7 @@
     "coveralls": "^3.0.0",
     "eslint": "^7.0.0",
     "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-putout": "^6.7.0",
+    "eslint-plugin-putout": "^7.1.1",
     "madrun": "^8.0.5",
     "mock-require": "^3.0.2",
     "nodemon": "^2.0.0",
