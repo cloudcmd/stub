@@ -1,3 +1,12 @@
+2021.02.08, v3.4.0
+
+feature:
+- (package) eslint-plugin-putout v7.1.1
+- (package) putout v14.1.3
+- (stub) add rejects
+- (package) supertape v4.0.0
+
+
 2020.12.22, v3.3.0
 
 feature:
