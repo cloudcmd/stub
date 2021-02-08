@@ -168,6 +168,16 @@ test('stub: throws', (t) => {
     t.end();
 });
 
+test('stub: rejects', async (t) => {
+    const fn = stub().rejects('hello');
+    const catcher = stub();
+    
+    await fn().catch(catcher);
+    
+    t.calledWith(catcher, ['hello']);
+    t.end();
+});
+
 test('stub: isStub', (t) => {
     const fn = stub();
     

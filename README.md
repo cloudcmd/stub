@@ -53,6 +53,15 @@ fn();
 Error('hello');
 ```
 
+### stub().rejects([error])
+
+```js
+const fn = stub().rejects(Error('hello'));
+await fn();
+// rejects
+Error('hello');
+```
+
 ### stub().calledWith([args])
 
 ```js
