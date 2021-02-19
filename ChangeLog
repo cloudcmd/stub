@@ -1,3 +1,10 @@
+2021.02.19, v3.5.0
+
+feature:
+- (package) putout v15.1.2
+- (@cloudcmd/stub) add resolves
+
+
 2021.02.08, v3.4.0
 
 feature:
