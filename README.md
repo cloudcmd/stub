@@ -62,6 +62,15 @@ await fn();
 Error('hello');
 ```
 
+### stub().resolves([values])
+
+```js
+const fn = stub().resolves('hello');
+await fn();
+// resolves
+'hello';
+```
+
 ### stub().calledWith([args])
 
 ```js
