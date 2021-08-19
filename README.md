@@ -1,10 +1,10 @@
 # Stub [![NPM version][NPMIMGURL]][NPMURL] [![Dependency Status][DependencyStatusIMGURL]][DependencyStatusURL] [![Build Status][BuildStatusIMGURL]][BuildStatusURL] [![Coverage Status][CoverageIMGURL]][CoverageURL]
 
 [NPMIMGURL]: https://img.shields.io/npm/v/@cloudcmd/stub.svg?style=flat&longCache=true
-[BuildStatusIMGURL]: https://img.shields.io/travis/cloudcmd/stub/master.svg?style=flat&longCache=true
+[BuildStatusURL]: https://github.com/coderaiser/putout/actions?query=workflow%3A%22Node+CI%22 "Build Status"
+[BuildStatusIMGURL]: https://github.com/coderaiser/putout/workflows/Node%20CI/badge.svg
 [DependencyStatusIMGURL]: https://img.shields.io/david/cloudcmd/stub.svg?style=flat&longCache=true
 [NPMURL]: https://npmjs.org/package/@cloudcmd/stub "npm"
-[BuildStatusURL]: https://travis-ci.org/cloudcmd/stub "Build Status"
 [DependencyStatusURL]: https://david-dm.org/cloudcmd/stub "Dependency Status"
 [CoverageURL]: https://coveralls.io/github/cloudcmd/stub?branch=master
 [CoverageIMGURL]: https://coveralls.io/repos/cloudcmd/stub/badge.svg?branch=master&service=github
