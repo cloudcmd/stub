@@ -23,8 +23,8 @@
   },
   "dependencies": {
     "chalk": "^4.0.0",
-    "jest-diff": "^26.0.1",
     "strip-ansi": "^6.0.0"
+    "jest-diff": "^27.0.6"
   },
   "keywords": [
     "sinon",
