@@ -11,11 +11,15 @@
   },
   "scripts": {
     "test": "madrun test",
+    "test:dts": "madrun test:dts",
     "watch:test": "madrun watch:test",
     "lint": "madrun lint",
+    "fresh:lint": "madrun fresh:lint",
+    "lint:fresh": "madrun lint:fresh",
     "fix:lint": "madrun fix:lint",
     "coverage": "madrun coverage",
-    "report": "madrun report"
+    "report": "madrun report",
+    "wisdom": "madrun wisdom"
   },
   "dependencies": {
     "chalk": "^4.0.0",
@@ -33,6 +37,7 @@
   ],
   "devDependencies": {
     "c8": "^7.5.0",
+    "check-dts": "^0.5.5",
     "coveralls": "^3.0.0",
     "eslint": "^7.0.0",
     "eslint-plugin-node": "^11.0.0",
