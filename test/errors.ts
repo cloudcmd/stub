@@ -1,4 +1,7 @@
-import {stub, isStub} from '..';
+import {
+    stub,
+    isStub,
+} from '..';
 
 // THROWS Type 'Stub' is not assignable to type 'string'.
 const a: string = stub();
