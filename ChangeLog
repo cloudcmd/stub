@@ -1,3 +1,9 @@
+2021.09.23, v3.7.1
+
+fix:
+- (stub) types: withName
+
+
 2021.09.23, v3.7.0
 
 feature:
