@@ -90,7 +90,36 @@ const fn = stub();
 new fn();
 
 fn.calledWithNew();
-// returns true
+// returns
+true;
+```
+
+### stub().calledBefore(fn)
+
+```js
+const fn1 = stub();
+const fn2 = stub();
+
+fn1();
+fn2();
+
+fn1.calledBefore(fn2);
+// returns
+true;
+```
+
+### stub().calledAfter(fn)
+
+```js
+const fn1 = stub();
+const fn2 = stub();
+
+fn1();
+fn2();
+
+fn2.calledAfter(fn1);
+// returns
+true;
 ```
 
 ### stub().called
@@ -139,6 +168,26 @@ fn(1);
 fn.args;
 // returns
 [[1]];
+```
+
+### stub().callId
+
+Each `stub` has it `callId`, which can be used to determine order of `stub` calls:
+
+```js
+const fn1 = stub();
+const fn2 = stub();
+
+fn1();
+fn2();
+
+fn1.callId;
+// returns
+1;
+
+fn2.callId;
+// returns
+2;
 ```
 
 ### isStub(fn)

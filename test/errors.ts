@@ -7,9 +7,14 @@ import {
 const a: string = stub();
 
 const fn = stub();
+const fn1 = stub();
 fn(a);
 
 fn.called;
+fn.callId;
+
+fn.calledBefore(fn1);
+fn.calledAfter(fn1);
 
 // THROWS Type 'boolean' is not assignable to type 'string'.
 const b: string = fn.calledWith();

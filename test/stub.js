@@ -184,6 +184,50 @@ test('stub: resolves', async (t) => {
     t.end();
 });
 
+test('stub: callId: before', (t) => {
+    const init = stub();
+    const show = stub();
+    
+    init();
+    show();
+    
+    t.ok(init.callId < show.callId);
+    t.end();
+});
+
+test('stub: callId: after', (t) => {
+    const init = stub().withName('init');
+    const show = stub().withName('show');
+    
+    show();
+    init();
+    
+    t.notOk(init.callId < show.callId);
+    t.end();
+});
+
+test('stub: calledAfter', (t) => {
+    const init = stub().withName('init');
+    const show = stub().withName('show');
+    
+    init();
+    show();
+    
+    t.ok(show.calledAfter(init));
+    t.end();
+});
+
+test('stub: calledBefore', (t) => {
+    const init = stub().withName('init');
+    const show = stub().withName('show');
+    
+    init();
+    show();
+    
+    t.ok(init.calledBefore(show));
+    t.end();
+});
+
 test('stub: isStub', (t) => {
     const fn = stub();
     
