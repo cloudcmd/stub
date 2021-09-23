@@ -15,6 +15,7 @@ fn.callId;
 
 fn.calledBefore(fn1);
 fn.calledAfter(fn1);
+fn.withName('hello');
 
 // THROWS Type 'boolean' is not assignable to type 'string'.
 const b: string = fn.calledWith();

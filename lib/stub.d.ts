@@ -7,6 +7,7 @@ export type Stub = Function & {
     calledWith: (...args: unknown[]) => boolean;
     calledBefore: (fn: Stub) => boolean;
     calledAfter: (fn: Stub) => boolean;
+    withName: (name: string) => Stub;
     throws: (error: Error) => Stub;
     rejects: (error: Error) => Promise<Stub>;
     resolves: (value: unknown) => Stub;
