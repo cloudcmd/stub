@@ -9,6 +9,8 @@ const a: string = stub();
 const fn = stub();
 fn(a);
 
+fn.called;
+
 // THROWS Type 'boolean' is not assignable to type 'string'.
 const b: string = fn.calledWith();
 
