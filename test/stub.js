@@ -25,9 +25,7 @@ test('stub: not called', (t) => {
 });
 
 test('stub: called: await', async (t) => {
-    const fn = stub(async () => {
-        return 'hello';
-    });
+    const fn = stub(async () => 'hello');
     
     await fn();
     
@@ -36,13 +34,11 @@ test('stub: called: await', async (t) => {
 });
 
 test('stub: called: await: result', async (t) => {
-    const fn = stub(async () => {
-        return 'hello';
-    });
+    const fn = stub(async () => 'hello');
     
     const result = await fn();
     
-    t.equal(result, 'hello', 'should equal');
+    t.equal(result, 'hello');
     t.end();
 });
 
@@ -53,7 +49,7 @@ test('stub: called: await: throw', async (t) => {
     
     const [e] = await tryToCatch(fn, 'hello');
     
-    t.equal(e.message, 'hello', 'should equal');
+    t.equal(e.message, 'hello');
     t.end();
 });
 
@@ -102,7 +98,7 @@ test('stub: returns', (t) => {
     
     const result = fn();
     
-    t.equal(result, 'hello', 'should equal');
+    t.equal(result, 'hello');
     t.end();
 });
 
@@ -148,14 +144,14 @@ test('stub: callCount', (t) => {
     fn();
     fn();
     
-    t.equal(fn.callCount, 3, 'should equal');
+    t.equal(fn.callCount, 3);
     t.end();
 });
 
 test('stub: callCount: not called', (t) => {
     const fn = stub();
     
-    t.equal(fn.callCount, 0, 'should equal');
+    t.equal(fn.callCount, 0);
     t.end();
 });
 

@@ -1,7 +1,7 @@
 import {
     stub,
     isStub,
-} from '..';
+} from '../lib/stub.js';
 
 // THROWS Type 'Stub' is not assignable to type 'string'.
 const a: string = stub();
