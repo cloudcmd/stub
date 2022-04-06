@@ -4,7 +4,7 @@
   "type": "commonjs",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "simplest sinon.stub alternative with diff support",
-  "homepage": "http://github.com/coderaiser/cloudcmd/stub",
+  "homepage": "http://github.com/cloudcmd/stub",
   "main": "lib/stub.js",
   "repository": {
     "type": "git",
