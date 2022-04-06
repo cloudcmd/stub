@@ -12,7 +12,7 @@ export type Stub = Function & {
     rejects: (error: Error) => Promise<Stub>;
     resolves: (value: unknown) => Stub;
     returns: (value: unknown) => Stub;
-}
+};
 
 export function stub(fn?: Function): Stub;
 export function isStub(fn: Stub | Function): Boolean;
