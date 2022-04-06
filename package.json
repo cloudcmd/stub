@@ -37,7 +37,7 @@
   ],
   "devDependencies": {
     "c8": "^7.5.0",
-    "check-dts": "^0.5.5",
+    "check-dts": "^0.6.6",
     "coveralls": "^3.0.0",
     "eslint": "^8.0.0-beta.0",
     "eslint-plugin-node": "^11.0.0",
