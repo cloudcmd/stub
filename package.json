@@ -1,6 +1,6 @@
 {
   "name": "@cloudcmd/stub",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "simplest sinon.stub alternative with diff support",

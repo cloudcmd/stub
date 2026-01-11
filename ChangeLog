@@ -1,3 +1,23 @@
+2026.01.11, v5.0.0
+
+feature:
+- 1310daf @cloudcmd/stub: migrate to ESM
+- 89e05ea @cloudcmd/stub: get rid of chalk, strip-ansi
+- c7d4779 @cloudcmd/stub: try-to-catch v4.0.3
+- 6880a72 @cloudcmd/stub: try-catch v4.0.7
+- 27b3ce1 @cloudcmd/stub: supertape v12.0.11
+- 4e7d286 @cloudcmd/stub: strip-ansi v7.1.2
+- bf8bd13 @cloudcmd/stub: redrun v13.0.0
+- 57bba9a @cloudcmd/stub: putout v41.7.0
+- febdd5a @cloudcmd/stub: nodemon v3.1.11
+- e931046 @cloudcmd/stub: madrun v12.1.0
+- 57065a9 @cloudcmd/stub: jest-diff v30.2.0
+- 96c8249 @cloudcmd/stub: eslint-plugin-putout v29.4.0
+- 92a1f5f @cloudcmd/stub: eslint v9.39.2
+- e8fc1ce @cloudcmd/stub: check-dts v0.9.0
+- 31f4764 @cloudcmd/stub: chalk v5.6.2
+- 83ce12b @cloudcmd/stub: c8 v10.1.3
+
 2022.04.06, v4.0.1
 
 fix:
