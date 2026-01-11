@@ -50,7 +50,7 @@
     "redrun": "^13.0.0",
     "supertape": "^12.0.11",
     "try-catch": "^4.0.7",
-    "try-to-catch": "^3.0.0"
+    "try-to-catch": "^4.0.3"
   },
   "license": "MIT",
   "engines": {
