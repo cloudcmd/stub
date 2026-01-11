@@ -23,12 +23,13 @@ npm i @cloudcmd/stub
 
 ```js
 import {stub} from '@cloudcmd/stub';
+
 const fn = stub();
 
 // fn contains stubbed function
 const asyncFn = stub(async () => {
     throw Error('hi');
-});// asyncFn contains stub async function
+}); // asyncFn contains stub async function
 ```
 
 ### stub().returns([value])
