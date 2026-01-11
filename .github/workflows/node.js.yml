@@ -1,4 +1,4 @@
-name: CI
+name: Node CI
 on:
   - push
   - pull_request
@@ -6,28 +6,41 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      NAME: stub
+      NAME: "@cloudcmd/stub"
     strategy:
       matrix:
         node-version:
-          - 16.x
-          - 17.x
+          - 22.x
+          - 24.x
+          - 25.x
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v5
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
-      - run: npm run fix:lint
-      - run: npm run coverage
-      - run: npm run report
+      - name: Install Redrun
+        run: bun install redrun -g --no-save
+      - name: Install
+        run: bun i -f --no-save
+      - name: Lint
+        run: redrun fix:lint
+      - name: Commit fixes
+        continue-on-error: true
+        uses: EndBug/add-and-commit@v9
+        with:
+          fetch: --force
+          message: "chore: ${{ env.NAME }}: actions: lint ☘️"
+          pull: --rebase --autostash
+      - name: Coverage
+        run: redrun coverage report
       - name: Coveralls
-        uses: coverallsapp/github-action@master
+        uses: coverallsapp/github-action@v2
+        continue-on-error: true
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - uses: EndBug/add-and-commit@v7
-        with:
-          branch: master
-          message: chore(${{ env.NAME }}) lint using actions
-
+      - name: typos-action
+        uses: crate-ci/typos@v1.0.4

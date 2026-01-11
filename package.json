@@ -1,14 +1,14 @@
 {
   "name": "@cloudcmd/stub",
   "version": "4.0.1",
-  "type": "commonjs",
+  "type": "module",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "simplest sinon.stub alternative with diff support",
   "homepage": "http://github.com/cloudcmd/stub",
   "main": "lib/stub.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cloudcmd/stub.git"
+    "url": "git+https://github.com/cloudcmd/stub.git"
   },
   "scripts": {
     "test": "madrun test",
@@ -42,7 +42,6 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^29.4.0",
     "madrun": "^12.1.0",
-    "mock-require": "^3.0.2",
     "nodemon": "^3.1.11",
     "putout": "^41.7.0",
     "redrun": "^13.0.0",
@@ -52,7 +51,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=16"
+    "node": ">=22"
   },
   "publishConfig": {
     "access": "public"

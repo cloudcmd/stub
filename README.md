@@ -22,15 +22,13 @@ npm i @cloudcmd/stub
 - `impl` - stub implementation
 
 ```js
-const stub = require('@cloudcmd/stub');
+import {stub} from '@cloudcmd/stub';
 const fn = stub();
-// fn contains stubbed function
 
+// fn contains stubbed function
 const asyncFn = stub(async () => {
     throw Error('hi');
-});
-
-// asyncFn contains stub async function
+});// asyncFn contains stub async function
 ```
 
 ### stub().returns([value])
@@ -165,7 +163,9 @@ fn(1);
 
 fn.args;
 // returns
-[[1]];
+[
+    [1],
+];
 ```
 
 ### stub().callId

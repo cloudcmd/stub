@@ -16,3 +16,4 @@ export type Stub = Function & {
 
 export function stub(fn?: Function): Stub;
 export function isStub(fn: Stub | Function): Boolean;
+

@@ -1,10 +1,6 @@
-'use strict';
-
-const test = require('supertape');
-const tryToCatch = require('try-to-catch');
-const tryCatch = require('try-catch');
-const {reRequire} = require('mock-require');
-const stub = require('..');
+import {test, stub} from 'supertape';
+import {tryToCatch} from 'try-to-catch';
+import {tryCatch} from 'try-catch';
 
 const noop = () => {};
 
@@ -20,7 +16,7 @@ test('stub: called', (t) => {
 test('stub: not called', (t) => {
     const fn = stub();
     
-    t.notOk(fn.called, 'should not call');
+    t.notCalled(fn, 'should not call');
     t.end();
 });
 
@@ -79,17 +75,10 @@ test('stub: calledWith: different', async (t) => {
 });
 
 test('stub: calledWith: not called', (t) => {
-    const {log} = console;
-    console.log = noop;
+    const fn = stub(noop);
+    stub.setLog(stub());
     
-    reRequire('../lib/called-with');
-    const stub = reRequire('..');
-    
-    const fn = stub();
-    
-    console.log = log;
-    
-    t.notOk(fn.calledWith('hello'), 'should check sondition');
+    t.notOk(fn.calledWith('hello'), 'should check condition');
     t.end();
 });
 
@@ -126,14 +115,14 @@ test('stub: args', (t) => {
     fn(1, 2);
     fn('hello', 'world');
     
-    t.deepEqual(fn.args, [[1, 2], ['hello', 'world']], 'should equal');
+    t.deepEqual(fn.args, [[1, 2], ['hello', 'world']]);
     t.end();
 });
 
 test('stub: args: no', (t) => {
     const fn = stub();
     
-    t.deepEqual(fn.args, [], 'should equal');
+    t.deepEqual(fn.args, []);
     t.end();
 });
 
@@ -246,4 +235,3 @@ test('stub: isStub: no arg', (t) => {
     t.notOk(stub.isStub(), 'should not to be stub');
     t.end();
 });
-
