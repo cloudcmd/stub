@@ -47,7 +47,7 @@
     "mock-require": "^3.0.2",
     "nodemon": "^3.1.11",
     "putout": "^41.7.0",
-    "redrun": "^10.0.0",
+    "redrun": "^13.0.0",
     "supertape": "^7.2.1",
     "try-catch": "^3.0.0",
     "try-to-catch": "^3.0.0"
