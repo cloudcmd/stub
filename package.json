@@ -23,9 +23,7 @@
     "wisdom": "madrun wisdom"
   },
   "dependencies": {
-    "chalk": "^5.6.2",
-    "jest-diff": "^30.2.0",
-    "strip-ansi": "^7.1.2"
+    "jest-diff": "^30.2.0"
   },
   "keywords": [
     "sinon",
