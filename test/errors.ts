@@ -25,9 +25,10 @@ fn(b, c);
 
 type Log = (message: string) => void;
 
-const log = stub<[string]>();
+const log = stub<[
+    string,
+]>();
 
 const typedLog: Log = log;
 
 typedLog('hello');
-
