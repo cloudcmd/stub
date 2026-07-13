@@ -35,7 +35,7 @@
     "tape"
   ],
   "devDependencies": {
-    "check-dts": "^0.9.0",
+    "check-dts": "^1.0.0",
     "coveralls": "^3.0.0",
     "eslint": "^9.39.2",
     "eslint-plugin-node": "^11.0.0",
