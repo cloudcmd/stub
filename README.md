@@ -46,6 +46,7 @@ fn();
 ```js
 const fn = stub().throws(Error('hello'));
 fn();
+
 // throws
 Error('hello');
 ```
@@ -55,6 +56,7 @@ Error('hello');
 ```js
 const fn = stub().rejects(Error('hello'));
 await fn();
+
 // rejects
 Error('hello');
 ```
@@ -141,12 +143,14 @@ true;
 const fn = stub();
 
 fn.callCount;
+
 // returns
 0;
 
 fn();
 
 fn.callCount;
+
 // returns
 1;
 ```
@@ -181,10 +185,12 @@ fn1();
 fn2();
 
 fn1.callId;
+
 // returns
 1;
 
 fn2.callId;
+
 // returns
 2;
 ```
