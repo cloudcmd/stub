@@ -1,7 +1,11 @@
-import {stub, isStub, setLog} from '../lib/stub.js';
 import {tryToCatch} from 'try-to-catch';
 import {tryCatch} from 'try-catch';
 import {test} from 'supertape';
+import {
+    stub,
+    isStub,
+    setLog,
+} from '../lib/stub.js';
 
 const noop = () => {};
 
@@ -116,7 +120,10 @@ test('stub: args', (t) => {
     fn(1, 2);
     fn('hello', 'world');
     
-    t.deepEqual(fn.args, [[1, 2], ['hello', 'world']]);
+    t.deepEqual(fn.args, [
+        [1, 2],
+        ['hello', 'world'],
+    ]);
     t.end();
 });
 
