@@ -1,3 +1,15 @@
+2026.07.13, v5.1.0
+
+feature:
+- 1d85e9f @supertape/stub: improve types
+- 20c1647 @cloudcmd/stub: madrun v13.0.3
+- 619a034 @cloudcmd/stub: eslint v10.7.0
+- 94e25c1 @cloudcmd/stub: supertape v13.4.2
+- 34b195b @cloudcmd/stub: putout v42.9.0
+- f6b5e82 @cloudcmd/stub: eslint-plugin-putout v31.4.1
+- dffcd65 @cloudcmd/stub: check-dts v1.0.0
+- c420f11 @cloudcmd/stub: superc8 v12.7.0
+
 2026.01.11, v5.0.0
 
 feature:
