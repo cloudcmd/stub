@@ -40,7 +40,7 @@
     "eslint": "^10.7.0",
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-putout": "^31.4.1",
-    "madrun": "^12.1.0",
+    "madrun": "^13.0.3",
     "nodemon": "^3.1.11",
     "putout": "^42.9.0",
     "redrun": "^13.0.0",
