@@ -1,6 +1,7 @@
-import {test, stub} from 'supertape';
+import {stub, isStub, setLog} from '../lib/stub.js';
 import {tryToCatch} from 'try-to-catch';
 import {tryCatch} from 'try-catch';
+import {test} from 'supertape';
 
 const noop = () => {};
 
@@ -63,12 +64,12 @@ test('stub: calledWith', (t) => {
 test('stub: calledWith: different', async (t) => {
     const fn = stub();
     
-    stub.setLog(stub());
+    setLog(stub());
     
     await fn('world');
     const result = fn.calledWith('hello');
     
-    stub.setLog(console.log);
+    setLog(console.log);
     
     t.notOk(result, 'should check condition');
     t.end();
@@ -76,7 +77,7 @@ test('stub: calledWith: different', async (t) => {
 
 test('stub: calledWith: not called', (t) => {
     const fn = stub(noop);
-    stub.setLog(stub());
+    setLog(stub());
     
     t.notOk(fn.calledWith('hello'), 'should check condition');
     t.end();
@@ -220,18 +221,18 @@ test('stub: calledBefore', (t) => {
 test('stub: isStub', (t) => {
     const fn = stub();
     
-    t.ok(stub.isStub(fn), 'should be stub');
+    t.ok(isStub(fn), 'should be stub');
     t.end();
 });
 
 test('stub: isStub: no', (t) => {
     const fn = () => {};
     
-    t.notOk(stub.isStub(fn), 'should not to be stub');
+    t.notOk(isStub(fn), 'should not to be stub');
     t.end();
 });
 
 test('stub: isStub: no arg', (t) => {
-    t.notOk(stub.isStub(), 'should not to be stub');
+    t.notOk(isStub(), 'should not to be stub');
     t.end();
 });

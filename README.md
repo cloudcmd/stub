@@ -17,7 +17,7 @@ npm i @cloudcmd/stub
 
 ## API
 
-### stub([impl])
+### stub(impl)
 
 - `impl` - stub implementation
 
