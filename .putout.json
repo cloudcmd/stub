@@ -4,7 +4,9 @@
             "remove-console": "off"
         },
         "test/errors.ts": {
-            "remove-unused-expressions": "off"
+            "remove-unused-expressions": "off",
+            "variables/remove-useless": "off",
+            "variables/remove-useless-rename": "off"
         }
     }
 }
